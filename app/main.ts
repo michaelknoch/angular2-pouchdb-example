@@ -16,17 +16,15 @@ import {
     PathLocationStrategy,
     APP_BASE_HREF }
     from '@angular/common';
-import {LocalStorageService, LocalStorageSubscriber} from 'angular2-localstorage/dist';
 import {PouchService} from "./service/pouch.service";
+import {StampService} from "./service/stamp.service";
 
-var appPromise = bootstrap(AppComponent, [
+bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
     HTTP_PROVIDERS,
     provide(LocationStrategy, {useClass: HashLocationStrategy}),
     provide(APP_BASE_HREF, {useValue: '/'}),
     provide(BrowserXhr, {useClass: CustomBrowserXhr}),
-    LocalStorageService,
-    PouchService
+    PouchService,
+    StampService
 ]);
-
-LocalStorageSubscriber(appPromise);
