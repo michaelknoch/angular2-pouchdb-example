@@ -95,6 +95,8 @@ ul {
 body {
     background-color: whitesmoke;
     font-family: 'Helvetica Neue';
+    background: #1f1f1f;
+    color: white;
 }
 
 .fullwidth {
@@ -104,4 +106,16 @@ body {
 
 .clear-height {
     min-height: auto;
+}
+
+input, textarea {
+    color: black;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.container {
+    padding-top: 15px;
 }
