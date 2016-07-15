@@ -19,7 +19,6 @@
     "@angular/router-deprecated": "2.0.0-rc.2",
     "@angular/upgrade": "2.0.0-rc.4",
     "angular2-in-memory-web-api": "0.0.7",
-    "angular2-localstorage": "git+https://github.com/marcj/angular2-localstorage.git",
     "bootstrap": "^3.3.6",
     "core-js": "^2.4.0",
     "font-awesome": "^4.6.1",

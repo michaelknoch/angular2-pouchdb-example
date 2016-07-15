@@ -5,16 +5,14 @@
         'app': 'dist', // 'dist',
         'rxjs': 'node_modules/rxjs',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-        '@angular': 'node_modules/@angular',
-        'angular2-localstorage/dist': 'node_modules/angular2-localstorage/dist'
+        '@angular': 'node_modules/@angular'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'dist': {main: 'main.js', defaultExtension: 'js'},
         'rxjs': {defaultExtension: 'js'},
-        'angular2-in-memory-web-api': {defaultExtension: 'js'},
-        'angular2-localstorage/dist': {main: 'index.js', defaultExtension: 'js'}
+        'angular2-in-memory-web-api': {defaultExtension: 'js'}
     };
 
     var packageNames = [
