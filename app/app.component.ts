@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
-import {Login} from './comp/login/login.comp';
+import {StampList} from './comp/stampList/stampList.comp';
 import {PouchService} from "./service/pouch.service";
 
 @Component({
@@ -13,15 +13,15 @@ import {PouchService} from "./service/pouch.service";
 @RouteConfig([
     {
         path: '/',
-        component: Login,
-        name: 'Login'
+        component: StampList,
+        name: 'StampList'
     }
 ])
 
 export class AppComponent {
 
     constructor(private _pouch: PouchService) {
-        console.info('init');
+
     }
 
 
