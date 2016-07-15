@@ -97,6 +97,25 @@ body {
     font-family: 'Helvetica Neue';
     background: #1f1f1f;
     color: white;
+    color: #444444;
+    background: #D3959B; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #D3959B, #BFE6BA); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #D3959B, #BFE6BA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h2, h3 {
+    font-weight: 100;
+}
+
+h2.headline {
+    font-weight: 300 !important;
+    text-transform: uppercase;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.76);
+    margin-left: 15px;
+    float: left;
+    padding: 5px;
+    width: calc(100% - 30px);
 }
 
 .fullwidth {
@@ -116,6 +135,7 @@ input, textarea {
     cursor: pointer;
 }
 
-.container {
-    padding-top: 15px;
+.inner-padding {
+    padding-left: 15px;
+    padding-right: 15px;
 }
