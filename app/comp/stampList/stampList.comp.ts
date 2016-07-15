@@ -18,6 +18,7 @@ export class StampList implements OnInit {
 
     ngOnInit() {
         this._stamp.getStamps().subscribe(data => {
+            console.info('Stamps from pouch', data);
             this.stamps = data;
         })
     }

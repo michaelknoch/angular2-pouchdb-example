@@ -1,15 +1,13 @@
-<div class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <ul>
-                    <li *ngFor="let stamp of stamps">
-                        <h2>{{stamp._id}}</h2>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Stamps</h2>
+        <ul>
+            <li class="stamp" *ngFor="let stamp of stamps">
+                <h2>{{stamp.title}}: {{stamp.amount}}</h2>
+                <p>{{stamp.description}}</p>
+            </li>
+        </ul>
     </div>
-
 </div>
+
 
