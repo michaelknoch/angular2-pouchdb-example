@@ -1,7 +1,13 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <h2>Maseltov!</h2>
+            <div class="col-xs-12">
+                <ul>
+                    <li *ngFor="let stamp of stamps">
+                        <h2>{{stamp._id}}</h2>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
