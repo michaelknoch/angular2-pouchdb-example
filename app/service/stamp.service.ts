@@ -14,7 +14,7 @@ export class StampService {
     }
 
     public getStamps() {
-        return this._pouch.getStamps();
+        return this._pouch.getDocument('stamps');
     }
 
 }

@@ -42,10 +42,9 @@ export class PouchService {
         );
     }
 
-    public getStamps() {
-
+    public getDocument(documentId: string) {
         return new Observable(observer => {
-            this.db.get('stamps').then((doc) => {
+            this.db.get(documentId).then((doc) => {
                 observer.next(doc.data);
             });
         });
