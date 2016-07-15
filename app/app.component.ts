@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {Login} from './comp/login/login.comp';
+import {PouchService} from "./service/pouch.service";
 
 @Component({
     moduleId: module.id,
@@ -17,10 +18,10 @@ import {Login} from './comp/login/login.comp';
     }
 ])
 
-
 export class AppComponent {
 
-    constructor() {
+    constructor(private _pouch: PouchService) {
+        console.info('init');
     }
 
 

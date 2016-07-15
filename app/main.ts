@@ -1,3 +1,4 @@
+/// <reference path="../typings/pouchDB/pouch.d.ts" />
 ///<reference path="../typings/browser.d.ts" />
 
 import {AppComponent} from './app.component';
@@ -16,6 +17,7 @@ import {
     APP_BASE_HREF }
     from '@angular/common';
 import {LocalStorageService, LocalStorageSubscriber} from 'angular2-localstorage/dist';
+import {PouchService} from "./service/pouch.service";
 
 var appPromise = bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
@@ -24,6 +26,7 @@ var appPromise = bootstrap(AppComponent, [
     provide(APP_BASE_HREF, {useValue: '/'}),
     provide(BrowserXhr, {useClass: CustomBrowserXhr}),
     LocalStorageService,
+    PouchService
 ]);
 
 LocalStorageSubscriber(appPromise);
