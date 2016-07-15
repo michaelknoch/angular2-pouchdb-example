@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router, RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {StampList} from './comp/stampList/stampList.comp';
 import {PouchService} from "./service/pouch.service";
+import {NewStamp} from "./comp/newStamp/newStamp.comp";
 
 @Component({
     moduleId: module.id,
@@ -15,6 +16,11 @@ import {PouchService} from "./service/pouch.service";
         path: '/',
         component: StampList,
         name: 'StampList'
+    },
+    {
+        path: '/newstamp',
+        component: NewStamp,
+        name: 'NewStamp'
     }
 ])
 
