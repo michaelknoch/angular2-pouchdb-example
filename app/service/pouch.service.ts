@@ -28,7 +28,6 @@ export class PouchService {
                     });
 
                 }).catch((err) => {
-
                     console.log(err);
                     if (err.status === 404) {
                         this.db.put({
@@ -43,8 +42,7 @@ export class PouchService {
         );
     }
 
-    public
-    getStamps() {
+    public getStamps() {
 
         return new Observable(observer => {
             this.db.get('stamps').then((doc) => {
