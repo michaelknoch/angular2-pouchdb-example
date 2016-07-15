@@ -18,28 +18,33 @@ export class PouchService {
     }
 
     public newStamp(stamp: any) {
-        this.db.get('stamps').then((doc) => {
-            doc.data.push(stamp);
-            return this.db.put(doc);
 
-        }).then((response) => {
-            console.info(response)
-        }).catch((err) => {
+        return new Observable(observer => {
 
-            console.log(err);
-            if (err.status === 404) {
-                this.db.put({
-                    _id: 'stamps',
-                    data: [stamp]
-                }).then(resp => {
-                    console.log(resp);
-                })
+                this.db.get('stamps').then((doc) => {
+                    doc.data.push(stamp);
+                    return this.db.put(doc).then(resp => {
+                        observer.next(resp);
+                    });
+
+                }).catch((err) => {
+
+                    console.log(err);
+                    if (err.status === 404) {
+                        this.db.put({
+                            _id: 'stamps',
+                            data: [stamp]
+                        }).then(resp => {
+                            observer.next(resp);
+                        })
+                    }
+                });
             }
-
-        });
+        );
     }
 
-    public getStamps() {
+    public
+    getStamps() {
 
         return new Observable(observer => {
             this.db.get('stamps').then((doc) => {
