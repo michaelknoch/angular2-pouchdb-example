@@ -1,7 +1,9 @@
 <div class="row">
-    <h2 class="col-xs-12">New Stamp</h2>
-    <input placeholder="amount" class="col-xs-12 amount" [(ngModel)]="amount" type="number">
-    <input placeholder="Title" class="col-xs-12 title" [(ngModel)]="title" type="text">
-    <textarea placeholder="textarea" class="col-xs-12 description" [(ngModel)]="description"></textarea>
-    <a class="fullbutton submit pointer" (click)="newStamp()">Submit</a>
+    <h2 class="col-xs-12 headline">New Stamp</h2>
+    <div class="col-xs-12">
+        <input placeholder="amount" class="col-xs-12 amount" [(ngModel)]="amount" type="number">
+        <input placeholder="Title" class="col-xs-12 title" [(ngModel)]="title" type="text">
+        <textarea placeholder="textarea" class="col-xs-12 description" [(ngModel)]="description"></textarea>
+        <a class="fullbutton submit pointer" (click)="newStamp()">Submit</a>
+    </div>
 </div>

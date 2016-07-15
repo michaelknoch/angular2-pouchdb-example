@@ -1,13 +1,12 @@
 <div class="row">
-    <div class="col-xs-12">
-        <h2>Stamps</h2>
-        <ul>
-            <li class="stamp" *ngFor="let stamp of stamps">
-                <h2>{{stamp.title}}: {{stamp.amount}}</h2>
-                <p>{{stamp.description}}</p>
-            </li>
-        </ul>
-    </div>
+    <h2 class="col-xs-12 headline">Stamps</h2>
+    <ul>
+        <li class="stamp col-xs-12 inner-padding" *ngFor="let stamp of stamps">
+            <h2>{{stamp.title}}: {{stamp.amount}}</h2>
+            <p>{{stamp.description}}</p>
+        </li>
+    </ul>
 </div>
+
 
 
