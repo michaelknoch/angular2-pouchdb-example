@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/observable';
-import {Database} from "./abstractDatabase";
+import {Database} from "./database/abstractDatabase";
 
 @Injectable()
 export class StampService {

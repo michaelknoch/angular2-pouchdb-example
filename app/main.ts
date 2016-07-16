@@ -16,9 +16,9 @@ import {
     PathLocationStrategy,
     APP_BASE_HREF }
     from '@angular/common';
-import {PouchService} from "./service/pouch.service";
+import {PouchService} from "./service/database/pouch.service";
 import {StampService} from "./service/stamp.service";
-import {Database} from "./service/abstractDatabase";
+import {Database} from "./service/database/abstractDatabase";
 
 bootstrap(AppComponent, [
     ROUTER_PROVIDERS,

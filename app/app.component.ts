@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {StampList} from './comp/stampList/stampList.comp';
-import {PouchService} from "./service/pouch.service";
+import {PouchService} from "./service/database/pouch.service";
 import {NewStamp} from "./comp/newStamp/newStamp.comp";
-import {Database} from "./service/abstractDatabase";
+import {Database} from "./service/database/abstractDatabase";
 
 @Component({
     moduleId: module.id,
