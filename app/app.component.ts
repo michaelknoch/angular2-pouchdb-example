@@ -3,6 +3,7 @@ import {Router, RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular
 import {StampList} from './comp/stampList/stampList.comp';
 import {PouchService} from "./service/pouch.service";
 import {NewStamp} from "./comp/newStamp/newStamp.comp";
+import {Database} from "./service/abstractDatabase";
 
 @Component({
     moduleId: module.id,
@@ -26,7 +27,7 @@ import {NewStamp} from "./comp/newStamp/newStamp.comp";
 
 export class AppComponent {
 
-    constructor(private _pouch: PouchService) {
+    constructor(private _db: Database) {
 
     }
 

@@ -18,6 +18,7 @@ import {
     from '@angular/common';
 import {PouchService} from "./service/pouch.service";
 import {StampService} from "./service/stamp.service";
+import {Database} from "./service/abstractDatabase";
 
 bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
@@ -25,6 +26,6 @@ bootstrap(AppComponent, [
     provide(LocationStrategy, {useClass: HashLocationStrategy}),
     provide(APP_BASE_HREF, {useValue: '/'}),
     provide(BrowserXhr, {useClass: CustomBrowserXhr}),
-    PouchService,
-    StampService
+    StampService,
+    provide(Database, {useClass: PouchService})
 ]);
