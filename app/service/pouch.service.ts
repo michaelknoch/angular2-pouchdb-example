@@ -1,13 +1,14 @@
 import { Injectable, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/observable';
+import {Database} from "./abstractDatabase";
 
 @Injectable()
-export class PouchService {
+export class PouchService extends Database {
 
     private db;
 
     constructor() {
-
+        super();
         console.info('init pouch');
         this.db = new PouchDB('trackyatime');
         this.db.info(err => {

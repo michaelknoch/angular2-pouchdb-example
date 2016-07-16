@@ -1,20 +1,20 @@
 import { Injectable, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/observable';
-import {PouchService} from "./pouch.service";
+import {Database} from "./abstractDatabase";
 
 @Injectable()
 export class StampService {
 
-    constructor(private _pouch: PouchService) {
+    constructor(private _db: Database) {
 
     }
 
     public newStamp(stamp: any) {
-        return this._pouch.newStamp(stamp);
+        return this._db.newStamp(stamp);
     }
 
     public getStamps() {
-        return this._pouch.getDocument('stamps');
+        return this._db.getDocument('stamps');
     }
 
 }
